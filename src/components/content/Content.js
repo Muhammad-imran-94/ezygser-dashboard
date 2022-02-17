@@ -1,0 +1,31 @@
+import React from "react";
+import classNames from "classnames";
+import Devices from '../Devices/Devices';
+
+import { Container } from "reactstrap";
+import { Switch, Route } from "react-router-dom";
+import Topbar from "./Topbar";
+
+const Content = ({ sidebarIsOpen, toggleSidebar }) => (
+  <Container
+    fluid
+    className={classNames("content", { "is-open": sidebarIsOpen })}
+  >
+    <Topbar toggleSidebar={toggleSidebar} />
+    <Switch>
+      <Route exact path="/" component={Devices} />
+      <Route exact path="/running-devices" component={() => "running-devices"} />
+      <Route exact path="/Ware-house" component={() => "Ware-house"} />
+      <Route exact path="/schedule-page" component={() => "schedule-page"} />
+      {/* <Route exact path="/Home-3" component={() => "Home-3"} />
+      <Route exact path="/Page-1" component={() => "Page-1"} />
+      <Route exact path="/Page-2" component={() => "Page-2"} />
+      <Route exact path="/page-1" component={() => "page-1"} />
+      <Route exact path="/page-2" component={() => "page-2"} />
+      <Route exact path="/page-3" component={() => "page-3"} />
+      <Route exact path="/page-4" component={() => "page-4"} /> */}
+    </Switch>
+  </Container>
+);
+
+export default Content;
