@@ -26,7 +26,7 @@ const Index = (props) => {
                         <Input
                           id="email"
                           name="email"
-                          className={"form-control" + " " + width }
+                          className={`form-control ${width}`}
                           placeholder="Enter Email"
                           type="email"
                           autoComplete="off"
