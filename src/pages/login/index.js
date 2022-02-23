@@ -26,8 +26,8 @@ const Login = (props) => {
   return (
     <>
       <div className="account-pages">
-        <Container className="h-100">
-          <Row className="justify-content-center align-items-center h-100">
+        <Container className="">
+          <Row className="justify-content-center align-items-center ">
             <Col md={7} lg={5} xl={5} >
               <Card className="overflow-hidden mt-4">
                 <div className="bg-purple">

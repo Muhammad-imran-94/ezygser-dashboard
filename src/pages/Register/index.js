@@ -29,8 +29,8 @@ const Register = (props) => {
   return (
     <>
       <div className="account-pages">
-        <Container className="h-100">
-          <Row className="justify-content-center align-items-center h-100">
+        <Container className="">
+          <Row className="justify-content-center align-items-center ">
             <Col md={8} lg={6} xl={5} className="mt-5">
               <Card className="overflow-hidden">
                 <div className="bg-purple bg-soft">
