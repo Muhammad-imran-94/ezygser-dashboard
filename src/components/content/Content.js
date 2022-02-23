@@ -13,7 +13,7 @@ import Topbar from "./Topbar";
 const Content = ({ sidebarIsOpen, toggleSidebar }) => (
   <Container
     fluid
-    className={classNames("content", { "is-open": sidebarIsOpen })}
+    className={classNames("content position-relative overflow-auto", { "is-open": sidebarIsOpen })}
   >
     <Topbar toggleSidebar={toggleSidebar} />
     <Switch>
