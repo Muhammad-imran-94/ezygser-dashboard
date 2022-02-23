@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const SubMenu = (props) => {
   const [collapsed, setCollapsed] = useState(true);
   const toggle = () => setCollapsed(!collapsed);
-  const { title, items, to ,tag , activeClassName } = props;
+  const { title, items, to ,tag } = props;
 
   return (
     <div>
@@ -15,7 +15,7 @@ const SubMenu = (props) => {
         onClick={toggle}
         className={classNames({ "menu-open": !collapsed })}
       >
-        <NavLink className="dropdown-toggle" to={to} activeClassName={activeClassName} tag={tag}>
+        <NavLink className="dropdown-toggle" to={to} tag={tag}>
           {/* <FontAwesomeIcon icon={icon} className="mr-2" /> */}
           <span className="menu-title">{title}</span>
         </NavLink>

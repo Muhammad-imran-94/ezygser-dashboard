@@ -16,34 +16,33 @@ const Topbar = ({ toggleSidebar }) => {
 
   return (
     <Navbar
-      
-      className=" shadow-sm p-3 top-navbar"
+      className=" shadow-sm p-3 top-navbar "
       expand="md"
     >
       <Button color="info" onClick={toggleSidebar}>
         <span>-</span>
       </Button>
       <NavbarToggler onClick={toggleTopbar} className={"white"}/>
-      <Collapse isOpen={topbarIsOpen} navbar>
-        <Nav className="ml-auto" navbar>
+      <Collapse isOpen={!topbarIsOpen} navbar className="justify-content-md-end">
+        <Nav className="ml-auto" navbar >
           <NavItem>
-            <NavLink tag={Link} to={"/page-1"}>
-              page 1
+            <NavLink tag={Link} to={"/de"}>
+              Add Device
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={"/page-2"}>
-              page 2
+            <NavLink tag={Link} to={"/schedule-page"}>
+              Schedule Device
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink tag={Link} to={"/page-3"}>
-              page 3
+              Settings
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink tag={Link} to={"/page-4"}>
-              page 4
+              Sign Out
             </NavLink>
           </NavItem>
         </Nav>

@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import {
   Row,
   Col,
@@ -10,17 +12,25 @@ import {
 } from "reactstrap";
 
 // import images
-import profileImg from "../assets/images/profile-img.png";
+import profileImg from "../../assets/images/profile-img.png";
 
-const Login = () => {
+const Login = (props) => {
+  let { history } = props;
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password:""
+  });
+
+  let duplicateLoginData= {...loginData}
+  console.log(loginData);
   return (
     <>
       <div className="account-pages">
-        <Container>
-          <Row className="justify-content-center">
-            <Col md={7} lg={5} xl={5} className="mt-5">
+        <Container className="h-100">
+          <Row className="justify-content-center align-items-center h-100">
+            <Col md={7} lg={5} xl={5} >
               <Card className="overflow-hidden mt-4">
-                <div className="bg-primary">
+                <div className="bg-purple">
                   <Row>
                     <Col className="col-7">
                       <div className="text-white p-4">
@@ -50,37 +60,60 @@ const Login = () => {
                           className="form-control"
                           placeholder="Enter email"
                           type="email"
+                          autoComplete="off"
+                          onChange={(e)=>{
+                            duplicateLoginData.email=e.target.value;
+                            setLoginData({ ...duplicateLoginData });
+                          }}
                         />
                       </div>
-                      <div className="mb-3">
+                      <div className="mb-1">
                         <Label className="form-label">Password</Label>
                         <Input
                           name="password"
                           type="password"
                           placeholder="Enter Password"
+                          autoComplete="off"
+                          onChange={(e)=>{
+                            duplicateLoginData.password=e.target.value;
+                            setLoginData({ ...duplicateLoginData });
+                          }}
                         />
+                      </div>
+                      <div className="m-0 p-0 d-flex justify-content-end">
+                        <label className="link"
+                        onClick={() => {
+                          history.push("/forget-password");
+                        }}
+                        >
+                          Forget Password? 
+                        </label>
                       </div>
                       <div className="mt-3 d-grid">
                         <button
-                          className="btn btn-primary btn-block "
+                          className="btn btn-purple btn-block "
                           type="submit"
+                          onClick={() => {
+                            history.push("/dashboard");
+                          }}
                         >
                           Log In
                         </button>
-                      </div>
-                      <div className="mt-5 text-center">
-                        <p className="mb-4">
-                          By registering you agree to the Egyzer{" "}
-                        </p>
                       </div>
                     </Form>
                   </div>
                 </CardBody>
               </Card>
-              <div className="mt-5 text-center">
-                <p>Already have an account ?</p> 
+              <div className="text-center mt-5">
+                <label>Not registerd Yet ? &nbsp;
+                  <span className="link" 
+                  onClick={() => {
+                   history.push("/sign-up");
+                 }}>
+                     Sign Up </span></label>
               </div>
             </Col>
+            
           </Row>
         </Container>
       </div>
