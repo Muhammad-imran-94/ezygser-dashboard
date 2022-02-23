@@ -1,5 +1,5 @@
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Card, CardText, CardBody,
+  CardTitle, CardSubtitle } from 'reactstrap';
 
 const Index = (props) => {
   return (
