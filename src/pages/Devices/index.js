@@ -6,7 +6,7 @@ export const Devices = () => {
   return (
     <>
     <Layout>
-      <Container className="position-relative mt-5 mt-md-0 mt-lg-0 mt-xl-0">
+      <Container className="position-relative mt-5">
         <Row className="justify-content-center">
           <Col md={8} lg={12} xl={12} className="mt-5">
             <Row>

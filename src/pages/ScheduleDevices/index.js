@@ -6,7 +6,7 @@ import { Row, Col, Card, Container } from "reactstrap";
   return (
     <>
 <Layout>
-<Container className="position-relative mt-5 mt-md-0 mt-lg-0 mt-xl-0">
+<Container className="position-relative mt-5">
         <Row className="justify-content-center">
           <Col md={12} lg={12} xl={12} className="mt-4">
             <Card className="overflow-hidden mt-4 px-4 d-flex align-center">
