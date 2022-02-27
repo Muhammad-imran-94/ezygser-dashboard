@@ -1,8 +1,6 @@
-// import {
-//     Link
-//   } from "react-router-dom";
+
 import React, { useState } from "react";
-import SideBar from "../sidebar/Sidebar";
+// import SideBar from "../sidebar/Sidebar";
 import TopBar from "../content/Topbar";
 import classNames from "classnames";
 import { Container } from "reactstrap";
@@ -19,14 +17,14 @@ const Index = (props) => {
       <Container
         fluid
         className={classNames(
-          "content overflow-auto",
+          "content position-relative overflow-auto",
           { "is-open": showNav }
         )}
       >
         <div className="d-flex layout w-100">
-          <SideBar showNav={showNav} toggleSiderBar={toggleSiderBar} />
+          {/* <SideBar showNav={showNav} toggleSiderBar={toggleSiderBar} /> */}
 
-          <div className="w-100 position-relative">
+          <div className="w-100 ">
             <TopBar toggleSiderBar={toggleSiderBar}/>
             {props.children}
           </div>
