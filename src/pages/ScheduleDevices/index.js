@@ -1,4 +1,3 @@
-import Toggle from "../../components/toggleButton";
 import Layout from '../../components/layout/layout';
 
 import { Row, Col, Card, Container } from "reactstrap";
