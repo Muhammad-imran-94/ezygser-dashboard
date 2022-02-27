@@ -19,7 +19,7 @@ const Index = (props) => {
       <Container
         fluid
         className={classNames(
-          "content position-relative overflow-auto bg-info",
+          "content position-relative overflow-auto",
           { "is-open": showNav }
         )}
       >
