@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { NavLink as RRNavLink } from 'react-router-dom';
 
-const Tbar=({toggleSiderBar})=> {
+const Tbar=({toggleSiderBar , showNav})=> {
 
     const [topbarIsOpen, setTopbarOpen] = useState(true);
   const toggleTopbar = () => setTopbarOpen(!topbarIsOpen);
@@ -18,7 +18,7 @@ const Tbar=({toggleSiderBar})=> {
   return (
     <> 
         <Navbar
-      className="shadow-sm p-3 position-absolute  top-navbar w-100 "
+      className={showNav ? "shadow-sm p-3 top-navbar w-100  ": "shadow-sm p-3 position-fixed  top-navbar w-100 "}
       expand="md"
     >
       <Button color="info" onClick={toggleSiderBar}>
