@@ -213,9 +213,6 @@ li a.dropdown-toggle::after {
   .content.is-open {
     margin-left: 0px;
   }
-  .top-navbar{
-    position: fixed !important;;
-  } 
   .single-tile{
     width:100%;
   }

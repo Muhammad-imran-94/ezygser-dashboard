@@ -12,14 +12,14 @@ const Index = (props) => {
   const toggleSiderBar = () => SetShowNav(!showNav);
 
 
-  console.log(showNav);
+  console.log("show nav status",showNav);
 
   return (
     <>
       <Container
         fluid
         className={classNames(
-          "content position-relative overflow-auto",
+          "content position-relative overflow-auto bg-info",
           { "is-open": showNav }
         )}
       >
