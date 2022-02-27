@@ -6,9 +6,9 @@ export const Devices = () => {
   return (
     <>
     <Layout>
-      <Container className="position-relative mt-5">
+      <Container className="  mt-0">
         <Row className="justify-content-center">
-          <Col md={8} lg={12} xl={12} className="mt-5">
+          <Col md={8} lg={12} xl={12} className="mt-3 mt-md-5 mt-lg-5 mt-xl-5">
             <Row>
               <div className="d-flex flex-wrap flex-column flex-lg-row flex-xl-row justify-content-between">
                 <div className="single-tile">

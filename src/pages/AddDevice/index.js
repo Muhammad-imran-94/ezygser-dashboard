@@ -16,7 +16,7 @@ import {
   return (
     <>
        <Layout>
-        <Container className="position-relative mt-5 ">
+        <Container className="position-relative mt-sm-0 mt-5 ">
           <Row className="justify-content-center">
             <Col md={8} lg={10} xl={12} className="mt-4">
               <Card className="overflow-hidden mt-4">
