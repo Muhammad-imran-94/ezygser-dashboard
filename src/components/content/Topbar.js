@@ -18,7 +18,7 @@ const Tbar=({SetShowNav , showNav})=> {
   return (
     <> 
         <Navbar
-      className={showNav ? "shadow-sm p-3 top-navbar w-100  ": "shadow-sm p-3 position-fixed  top-navbar w-100 "}
+      className="shadow-sm p-3 top-navbar w-100 "
       expand="md"
     >
       <Button color="info" onClick={()=>{SetShowNav(!showNav)}}>

@@ -5,11 +5,9 @@ import TopBar from "../content/Topbar";
 import classNames from "classnames";
 import { Container } from "reactstrap";
 
+
 const Index = (props) => {
   const [showNav, SetShowNav] = useState(true);
-//   const toggleSiderBar = () => SetShowNav(false);
-
-
   console.log("show nav status",showNav);
 
   return (
@@ -17,18 +15,18 @@ const Index = (props) => {
       <Container
         fluid
         className={classNames(
-          "content position-relative overflow-auto",
+          "content d-flex overflow-auto",
           { "is-open": showNav }
         )}
       >
-        <div className="d-flex layout w-100">
+        <div className={showNav ? " left-side sidebar is-open ": " left-close  " }>
           <SideBar showNav={showNav} SetShowNav={SetShowNav} />
-
-          <div className="w-100 ">
+          </div>
+          <div className=" w-100 " >
             <TopBar SetShowNav={SetShowNav} showNav={showNav}/>
             {props.children}
           </div>
-        </div>
+        
       </Container>
     </>
   );

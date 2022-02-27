@@ -8,7 +8,7 @@ function Index(props) {
     <>
       <div
         className={
-          showNav ? "sidebar is-open h-100 w-100 " : " sidebar  h-100 w-100"
+          showNav ? "sidebar is-open w-100 position-fixed " : " sidebar w-100 "
         }
       >
         <div className="sidebar-header border-bottom ">

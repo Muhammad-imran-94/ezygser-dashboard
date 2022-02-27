@@ -132,22 +132,35 @@ div a , .nav-item a {
   background: #571ae5!important;
 }
 /* ------SIDEBAR STYLE---------------- */
-.layout{
+.left-side{
   height:100vh;
-  overflow-x: hidden;
+  overflow: hidden;
+  width: 253px;
+  animation: move .9s;
 }
+
+@keyframes move {
+  from { margin-left: -253px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
 .sidebar {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 253px;
+  max-width: 253px;
   background: #363636;
   color: #fff;
-  margin-left: -250px;
-  transition: all 0.5s;
+  margin-left: -253px;
+  transition: all 0.9s;
+  height:100vh;
+  overflow:hidden;
 }
 
  .sidebar.is-open {
   margin-left: 0px;
-  transition: all 0.5s;
+  transition: all .9s;
 }
 
 
@@ -206,16 +219,28 @@ li a.dropdown-toggle::after {
   .single-tile{
     width:100%;
   }
+  
 }
 
 @media only screen and (max-width: 500px) {
-
+   
   .content.is-open {
     margin-left: 0px;
+    padding: relative;
+  }
+  .left-side{
+    position: absolute;
+    z-index: 10000000;
   }
   .single-tile{
     width:100%;
   }
+
+  .left-side{
+    height:100vh;
+    overflow: hidden;
+  }
+  
 
   .sidebar.is-open {
     min-width: 100%;
