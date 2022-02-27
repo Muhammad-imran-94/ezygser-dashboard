@@ -7,7 +7,7 @@ import { Container } from "reactstrap";
 
 const Index = (props) => {
   const [showNav, SetShowNav] = useState(true);
-  const toggleSiderBar = () => SetShowNav(!showNav);
+//   const toggleSiderBar = () => SetShowNav(false);
 
 
   console.log("show nav status",showNav);
@@ -22,10 +22,10 @@ const Index = (props) => {
         )}
       >
         <div className="d-flex layout w-100">
-          <SideBar showNav={showNav} toggleSiderBar={toggleSiderBar} />
+          <SideBar showNav={showNav} SetShowNav={SetShowNav} />
 
           <div className="w-100 ">
-            <TopBar toggleSiderBar={toggleSiderBar} showNav={showNav}/>
+            <TopBar SetShowNav={SetShowNav} showNav={showNav}/>
             {props.children}
           </div>
         </div>

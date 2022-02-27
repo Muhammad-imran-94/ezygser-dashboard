@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 
 function Index(props) {
-  let { showNav, toggleSiderBar } = props;
+  let { showNav, SetShowNav } = props;
 
   return (
     <>
@@ -12,7 +12,7 @@ function Index(props) {
         }
       >
         <div className="sidebar-header border-bottom ">
-          <span color="info" style={{ color: "#fff" }} onClick={toggleSiderBar}>
+          <span color="info" style={{ color: "#fff" }} onClick={()=>{SetShowNav(false)}}>
             &times;
           </span>
           <h3 className="pb-2 px-2 pt-3 h2">Ezgyzer</h3>
