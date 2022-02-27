@@ -26,7 +26,7 @@ const Index = (props) => {
         <div className="d-flex layout w-100">
           <SideBar showNav={showNav} toggleSiderBar={toggleSiderBar} />
 
-          <div className="w-100">
+          <div className="w-100 position-relative">
             <ToBar toggleSiderBar={toggleSiderBar}/>
             {props.children}
           </div>
