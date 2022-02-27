@@ -1,4 +1,5 @@
-// import React, { useState } from "react";
+
+import Layout from '../../components/layout/layout'
 
 import {
   Row,
@@ -10,12 +11,14 @@ import {
   Label,
   Form,
 } from "reactstrap";
+
  const Index = () => {
   return (
     <>
-        <Container>
+       <Layout>
+        <Container className="position-relative mt-5 mt-md-0 mt-lg-0 mt-xl-0">
           <Row className="justify-content-center">
-            <Col md={8} lg={10} xl={12} className="mt-5">
+            <Col md={8} lg={10} xl={12} className="mt-4">
               <Card className="overflow-hidden mt-4">
                 <CardBody className="pt-2 input-card">
                   <div className="p-2">
@@ -76,7 +79,7 @@ import {
             </Col>
           </Row>
         </Container>
-    
+        </Layout>
     </>
   )
 }

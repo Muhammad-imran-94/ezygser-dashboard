@@ -94,7 +94,7 @@ const Login = (props) => {
                           className="btn btn-purple btn-block "
                           type="submit"
                           onClick={() => {
-                            history.push("/dashboard");
+                            history.push("/devices");
                           }}
                         >
                           Log In

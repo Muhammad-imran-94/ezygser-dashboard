@@ -1,4 +1,5 @@
-import AddUser from "../../components/SendRequest";
+import SendRequest from "../../components/SendRequest";
+import Layout from '../../components/layout/layout';
 
 import {
     Row,
@@ -11,12 +12,13 @@ import {
 const Index = () => {
   return (
     <>
-      <Container>
-        <Row className="justify-content-center">
-          <Col md={8} lg={10} xl={12} className="mt-5">
+    <Layout>
+      <Container className="position-relative mt-5 mt-md-0 mt-lg-0 mt-xl-0">
+        <Row className="justify-content-center ">
+          <Col md={8} lg={10} xl={12} className="mt-4">
             <Card className="overflow-hidden mt-4">
               <CardBody className="pt-2 input-card">
-                <AddUser
+                <SendRequest
                   text={
                     "Enter email of user you want to add to manage your devices. An invitation will be send to this email for the new credentials for new user."
                   }
@@ -28,6 +30,7 @@ const Index = () => {
           </Col>
         </Row>
       </Container>
+      </Layout>
     </>
   );
 };

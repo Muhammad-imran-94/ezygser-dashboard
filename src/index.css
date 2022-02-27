@@ -66,6 +66,47 @@ Label{
   width: 100%;
   align-items: stretch;
 }
+.tiles{
+  animation: mymove .9s;
+}
+.tiles:hover{
+  box-shadow: 0 0 7px #969696;
+  transition: all .3s ease-in;
+  cursor: pointer
+}
+
+.fa{
+  font-size: 12px;
+}
+.navbar-toggler::after {
+  color: white;
+  content: "Menu";
+  font-size: 14px;
+}
+.top-navbar{
+  z-index:99999;
+}
+button{
+  outline: none!important;
+}
+.active{
+  color: #fff!important;
+}
+
+@keyframes mymove {
+  from {opacity: 50%;
+    -ms-transform: scaleY(0.7);
+  transform: scale(0.7);
+  }
+  to {opacity: 100%;
+    -ms-transform: scaleY(1); 
+  transform: scale(1);
+  }
+}
+
+.single-tile{
+  width:22%;
+}
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
@@ -74,13 +115,15 @@ body {
   background: #fafafa;
 }
 
-a,
-a:hover,
-a:focus {
-  color: inherit;
+div a , .nav-item a {
+  color: #a8a8a8;
   text-decoration: none;
   transition: all 0.3s;
 }
+ div a:hover {
+  color: #fff;
+}
+
 
 
 
@@ -89,6 +132,10 @@ a:focus {
   background: #571ae5!important;
 }
 /* ------SIDEBAR STYLE---------------- */
+.layout{
+  height:100vh;
+  overflow-x: hidden;
+}
 .sidebar {
   min-width: 250px;
   max-width: 250px;
@@ -98,39 +145,12 @@ a:focus {
   transition: all 0.5s;
 }
 
-.sidebar.is-open {
-  margin-left: 0;
-  transition: 0.5s;
+ .sidebar.is-open {
+  margin-left: 0px;
+  transition: all 0.5s;
 }
 
-.sidebar-header {
-  background: #363636;
-}
 
-.sidebar-header h3 {
-  color: #fff;
-  padding: 1em;
-}
-
-.sidebar ul p {
-  color: #fff;
-  padding: 10px;
-}
-
-.menu-open {
-  background: #363636;
-}
-
-.side-menu .list-unstyled .nav-item .nav-link ,.nav-link {  
-  color: rgb(184, 184, 184)!important;
-}
-
-.nav-item:hover {
-  color: #fff;
-  background: #571ae5;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
 
 .items-menu {
   color: #fff;
@@ -182,10 +202,22 @@ li a.dropdown-toggle::after {
   padding-right: 0px!important;
 }
 
+@media only screen and (max-width: 768px) {
+  .single-tile{
+    width:100%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
 
   .content.is-open {
-    margin-left: 100%;
+    margin-left: 0px;
+  }
+  .top-navbar{
+    position: fixed !important;;
+  } 
+  .single-tile{
+    width:100%;
   }
 
   .sidebar.is-open {

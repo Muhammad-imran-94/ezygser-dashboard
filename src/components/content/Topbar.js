@@ -8,47 +8,51 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import { NavLink as RRNavLink } from 'react-router-dom';
 
-const Topbar = ({ toggleSidebar }) => {
-  const [topbarIsOpen, setTopbarOpen] = useState(true);
+const Tbar=({toggleSiderBar})=> {
+
+    const [topbarIsOpen, setTopbarOpen] = useState(true);
   const toggleTopbar = () => setTopbarOpen(!topbarIsOpen);
 
   return (
-    <Navbar
-      className=" shadow-sm p-3 top-navbar "
+    <> 
+        <Navbar
+      className=" shadow-sm p-3 top-navbar  w-100"
       expand="md"
     >
-      <Button color="info" onClick={toggleSidebar}>
-        <span>-</span>
+      <Button color="info" onClick={toggleSiderBar}>
+      <i className="fa fa-bars" aria-hidden="true"></i>
       </Button>
-      <NavbarToggler onClick={toggleTopbar} className={"white"}/>
+      <NavbarToggler onClick={toggleTopbar} className={"white"} />
       <Collapse isOpen={!topbarIsOpen} navbar className="justify-content-md-end">
         <Nav className="ml-auto" navbar >
           <NavItem>
-            <NavLink tag={Link} to={"/de"}>
+            <NavLink activeClassName="active" tag={RRNavLink} to={"/add-device"}>
               Add Device
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={"/schedule-page"}>
+            <NavLink activeClassName="active" tag={RRNavLink} to={"/schedule-devices"}>
               Schedule Device
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={"/page-3"}>
+            <NavLink activeClassName="active" tag={RRNavLink} to={"/page-3"}>
               Settings
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink tag={Link} to={"/page-4"}>
+            <NavLink activeClassName="active" tag={RRNavLink} to={"/page-4"}>
               Sign Out
             </NavLink>
           </NavItem>
         </Nav>
       </Collapse>
     </Navbar>
-  );
-};
 
-export default Topbar;
+    </>
+  )
+}
+
+export default Tbar;

@@ -1,6 +1,6 @@
 
 import Routes from './Routes/index'
-
+// import AddDevice from './pages/AddDevice'
 function App() {
 
   
@@ -8,7 +8,9 @@ function App() {
  
     <>
       <Routes/>
-      
+      {/* <AddDevice/> */}
+
+ 
     </>
   );
 }
